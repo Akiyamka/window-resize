@@ -42,7 +42,8 @@ const windowResize = (() => {
       addCallback(callback)
     },
     clear: () => {
-      window.removeEventListener('resize', resize)
+      callbacks = [];
+      window.removeEventListener('resize', resize);
     }
   }
 })()
